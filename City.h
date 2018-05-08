@@ -4,11 +4,10 @@
 //#include "Map.h"
 
 class City {
-private:
+public:
 	unsigned pop;
 	Coos position;
 	Gold production;
-public:
 	
 	City(unsigned population, Coos pos, Gold prod){
 		pop = population;

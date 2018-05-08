@@ -5,6 +5,7 @@ class Ressource {
 protected:
 	int type;
 	int quantite = 0;
+	std::string nom;
 public:
 	int getType(){
 		return type;
@@ -24,15 +25,19 @@ public:
 		else
 			throw(666);
 	}
+	
+	 friend std::ostream& operator<<(std::ostream& os, const Ressource& r){
+		 os << r.quantite << " " << r.nom;
+	 } 
 };
 
-class Gold : protected Ressource {
-private:
-	int type = 0;
+class Gold : public Ressource {
 public:
 	
 	Gold(int n = 0){
+		type = 0;
 		quantite = n;
+		nom = "Or";
 	}
 };
 
