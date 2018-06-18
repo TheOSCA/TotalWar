@@ -26,9 +26,10 @@ public:
 			throw(666);
 	}
 	
-	 friend std::ostream& operator<<(std::ostream& os, const Ressource& r){
-		 os << r.quantite << " " << r.nom;
-	 } 
+	friend std::ostream& operator<<(std::ostream& os, const Ressource& r){
+		os << r.quantite << " " << r.nom;
+		return os;
+	} 
 };
 
 class Gold : public Ressource {
