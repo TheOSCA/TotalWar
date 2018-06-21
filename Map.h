@@ -4,9 +4,10 @@
 #include <cmath>
 
 class Coos {
+public:
 	int x;
 	int y;
-public:
+
 	Coos(int x = 0, int y = 0){
 		this->x = x;
 		this->y = y;
